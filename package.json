@@ -11,12 +11,13 @@
   "author": "Daniel Kokeny",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.10.1",
-    "@parcel/transformer-sass": "^2.10.1"
+    "@parcel/transformer-sass": "^2.10.1",
+    "parcel": "^2.10.1"
   },
   "dependencies": {
     "core-js": "^3.33.1",
     "fractional": "^1.0.0",
+    "fracty": "^1.0.11",
     "regenerator-runtime": "^0.14.0"
   }
 }
