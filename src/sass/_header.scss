@@ -10,6 +10,15 @@
     height: 4.6rem;
     display: block;
   }
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column;
+
+    &__logo {
+      height: 4.6rem;
+      margin: 2rem;
+    }
+  }
 }
 
 .search {
@@ -101,6 +110,11 @@
     &:hover {
       background-color: $color-grey-light-2;
     }
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    align-self: center;
+    margin: 2rem;
   }
 }
 

@@ -68,4 +68,8 @@ body {
     margin: 0;
     border-radius: 0;
   }
+  @media only screen and (max-width: $bp-small) {
+    display: flex;
+    flex-direction: column;
+  }
 }
