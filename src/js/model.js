@@ -1,5 +1,5 @@
 import { async } from 'regenerator-runtime';
-import { API_URL, RES_PER_PAGE, KEY } from './config';
+import { API_URL, RES_PER_PAGE, SM_RES_PER_PAGE, KEY } from './config';
 import { AJAX } from './helpers';
 
 export const state = {
@@ -9,6 +9,7 @@ export const state = {
     results: [],
     page: 1,
     resultsPerPage: RES_PER_PAGE,
+    resultsPerPageSmallDevice: SM_RES_PER_PAGE,
   },
   bookmarks: [],
 };
@@ -69,10 +70,17 @@ export const loadSearchResults = async function (query) {
 export const getSearchResultsPage = function (page = state.search.page) {
   state.search.page = page;
 
-  const start = (page - 1) * state.search.resultsPerPage; // 0
-  const end = page * state.search.resultsPerPage; // 9
+  if (window.innerWidth <= 600) {
+    const smallStart = (page - 1) * state.search.resultsPerPageSmallDevice;
+    const smallEnd = page * state.search.resultsPerPageSmallDevice;
 
-  return state.search.results.slice(start, end);
+    return state.search.results.slice(smallStart, smallEnd);
+  } else {
+    const start = (page - 1) * state.search.resultsPerPage; // 0
+    const end = page * state.search.resultsPerPage; // 9
+
+    return state.search.results.slice(start, end);
+  }
 };
 
 export const updateServings = function (newServings) {
