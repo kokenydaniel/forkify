@@ -1,4 +1,4 @@
-![Képernyőfotó 2023-11-03 - 19 12 00](https://github.com/kokenydaniel/forkify/assets/129154129/0555f257-42cb-4d65-ac37-f98ab6f01ba8)
+![Képernyőfotó 2023-11-10 - 13 31 46](https://github.com/kokenydaniel/forkify/assets/129154129/17a30ea5-b02f-4a97-9639-8ee644e0d5d8)
 
 <h1 align="center">Forkify Recipe App 😋🍽️</h1>
 
